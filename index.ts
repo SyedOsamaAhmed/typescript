@@ -15,5 +15,3 @@ numbers[0]=1;
 numbers[1]='a';
 
 let number:number[];
-
-number.forEach(n=>n.)
