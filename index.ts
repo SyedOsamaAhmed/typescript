@@ -16,5 +16,11 @@ numbers[1] = "a";
 
 let number: number[];
 
+
 //Tuples: It is fixed length array of exactly two elements of particular type.
 let user: [number, string] = [1, "Mosh"];
+
+
+
+
+
