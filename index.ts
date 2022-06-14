@@ -4,14 +4,20 @@ let is_pulished = true;
 
 /*Any type in transcript allows us to declare that var of any type and then change it but that will defeat purpose of typescript type checking feature */
 let level;
-level=1;
-level='abc'
+level = 1;
+level = "abc";
 
 //Arrays
 
 /*Any type arrays mean we can declare an array with different datatypes */
-let numbers:any=[]
-numbers[0]=1;
-numbers[1]='a';
+let numbers: any = [];
+numbers[0] = 1;
+numbers[1] = "a";
 
 let number:number[];
+
+
+
+//Tuples: It is fixed length array of exactly two elements of particular type.
+let user: [number, string] = [1, "Mosh"];
+
