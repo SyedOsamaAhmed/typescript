@@ -42,12 +42,11 @@ calculateTax(50_000);
 //Objects:
 
 //Type Alliases:
-type Employee={
+type Employee = {
   readonly id: number;
   name: string;
   retire: (date: Date) => void;
-
-}
+};
 let employee: Employee = {
   id: 1,
   name: "",
@@ -57,4 +56,31 @@ let employee: Employee = {
 };
 //Readonly property of object does not allow to change its value
 
+//Union types: when assigning parameter multiple types
 
+function kgtoLbs(weight: number | string): number {
+  //Narrowing technique: It is technique used in union types because compiler does not know whether variable or function param is number or string
+
+  if (typeof weight === "number") return weight * 2.2;
+  else return parseInt(weight) * 3.3;
+}
+
+kgtoLbs(10);
+kgtoLbs("18");
+
+//intersection type:
+
+type Draggable = {
+  drag: () => void;
+};
+
+type Resizable = {
+  resize: () => void;
+};
+
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+  drag: () => {},
+  resize: () => {},
+};

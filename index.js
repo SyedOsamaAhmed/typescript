@@ -24,4 +24,30 @@ var Size;
 })(Size || (Size = {}));
 let mysize = Size.medium;
 console.log(mysize);
+//functions:
+//passing taxYear as optional argument but it can be undefined so to cater this we pass the default value if no value provided
+function calculateTax(income, taxYear = 2022) {
+    if (taxYear < 2022)
+        return income * 1.2;
+    return income * 1.3;
+}
+calculateTax(50000);
+let employee = {
+    id: 1,
+    name: "",
+    retire: (date) => {
+        console.log(date);
+    },
+};
+//Readonly property of object does not allow to change its value
+//Union types: when assigning parameter multiple types
+function kgtoLbs(weight) {
+    //Narrowing technique: It is technique used in union types because compiler does not know whether variable or function param is number or string
+    if (typeof weight === "number")
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 3.3;
+}
+kgtoLbs(10);
+kgtoLbs("18");
 //# sourceMappingURL=index.js.map
