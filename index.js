@@ -50,4 +50,22 @@ function kgtoLbs(weight) {
 }
 kgtoLbs(10);
 kgtoLbs("18");
+let textBox = {
+    drag: () => { },
+    resize: () => { },
+};
+let quantity = 100;
+//Nullable types:
+function greet(name) {
+    if (name)
+        console.log(name.toUpperCase());
+    else
+        console.log("Hi!");
+}
+greet(undefined);
+function getCustomer(id) {
+    return id === 0 ? null : { birthdate: new Date() };
+}
+let customer = getCustomer(0);
+console.log(customer === null || customer === void 0 ? void 0 : customer.birthdate);
 //# sourceMappingURL=index.js.map

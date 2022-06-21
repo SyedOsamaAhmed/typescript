@@ -84,3 +84,31 @@ let textBox: UIWidget = {
   drag: () => {},
   resize: () => {},
 };
+
+//Literal type: literal types are used to limit the value of variables
+
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+type Metric = "cm" | "inch";
+
+//Nullable types:
+
+function greet(name: String | null | undefined) {
+  if (name) console.log(name.toUpperCase());
+  else console.log("Hi!");
+}
+
+greet(undefined);
+
+//Optional chaining:
+type Customer = {
+  birthday?: Date;
+};
+function getCustomer(id: number): Customer | null {
+  return id === 0 ? null : { birthday: new Date() };
+}
+
+let customer = getCustomer(0);
+//optional property access operator ?.
+console.log(customer?.birthday?.getFullYear())
