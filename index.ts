@@ -2,10 +2,22 @@ let sales = 123_456 - 789;
 let course = "TypeScript";
 let is_pulished = true;
 
-/*Any type in transcript allows us to declare that var of any type and then change it but that will defeat purpose of typescript type checking feature */
+/*Any type allows us to declare that var of any type but that will defeat purpose of typescript type checking feature. Dont want type checking a marker for typescript.Avoid strictness in typescript. */
 let level;
 level = 1;
 level = "abc";
+//type annotation is important when passing parameters and returning values from function.
+
+function addNum(val:number):number{
+  return val+2;
+  
+}
+
+const login=(name:string,email:string,isPaid:boolean=false)=>{
+
+}
+
+login("Osama","abc@o.com");
 
 //Arrays
 
